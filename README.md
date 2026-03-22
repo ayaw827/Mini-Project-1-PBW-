@@ -1,4 +1,4 @@
-# Mini-Project-1-PBW
+# Mini-Project-2-PBW
 **Nurhidayah | 2409116002 A’24**
 
 ## 1) Tampilan Setiap Section/Fitur
