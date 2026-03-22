@@ -526,11 +526,9 @@ Tahun di footer ditampilkan secara otomatis menggunakan:
 <?= date('Y'); ?>
 ```
 
----
+## 3) Teknologi yang Digunakan
 
-# 3) Teknologi yang Digunakan
-
-## A. HTML5
+### A. HTML5
 
 Digunakan untuk membuat struktur dasar halaman seperti:
 
@@ -539,7 +537,7 @@ Digunakan untuk membuat struktur dasar halaman seperti:
 * card
 * footer
 
-## B. CSS3
+### B. CSS3
 
 Digunakan untuk:
 
@@ -550,7 +548,7 @@ Digunakan untuk:
 * responsive styling
 * custom progress bar
 
-## C. Bootstrap 5.3.3
+### C. Bootstrap 5.3.3
 
 Digunakan untuk:
 
@@ -570,7 +568,7 @@ Contoh class Bootstrap:
 * `navbar`
 * `sticky-top`
 
-## D. PHP
+### D. PHP
 
 Digunakan sebagai backend untuk:
 
@@ -584,7 +582,7 @@ Contoh:
 mysqli_query($conn, "SELECT * FROM projects ORDER BY id ASC");
 ```
 
-## E. MySQL
+### E. MySQL
 
 Digunakan untuk menyimpan data website secara dinamis, seperti:
 
@@ -597,7 +595,7 @@ Digunakan untuk menyimpan data website secara dinamis, seperti:
 * certificates
 * contacts
 
-## F. Laragon
+### F. Laragon
 
 Digunakan sebagai local server untuk menjalankan:
 
@@ -605,11 +603,9 @@ Digunakan sebagai local server untuk menjalankan:
 * MySQL
 * project PHP
 
----
+## 4) Struktur Class CSS yang Digunakan
 
-# 4) Struktur Class CSS yang Digunakan
-
-## Class custom
+### Class custom
 
 * `nav-glass` → navbar blur transparan
 * `section` → jarak antar section
@@ -619,7 +615,7 @@ Digunakan sebagai local server untuk menjalankan:
 * `hero-section` → styling hero
 * `profile-img` → styling gambar profil
 
-## Class Bootstrap
+### Class Bootstrap
 
 * `container`
 * `row`
@@ -632,48 +628,38 @@ Digunakan sebagai local server untuk menjalankan:
 * `sticky-top`
 * `navbar-expand-lg`
 
----
+## 5) Struktur Database
 
-# 5) Struktur Database
+<img width="350" height="326" alt="image" src="https://github.com/user-attachments/assets/b4aeb845-be99-40ad-b578-dbf3711c1639" />
 
 Website ini menggunakan database **portfolio_db**.
 
-## Tabel yang digunakan
+### Tabel yang digunakan
 
-### 1. `brand`
-
-Menyimpan nama brand website.
+#### 1. `brand` untuk menyimpan nama brand website.
 
 * `id`
 * `brand_name`
 
-### 2. `profile`
-
-Menyimpan data hero.
+#### 2. `profile` untuk menyimpan data hero.
 
 * `id`
 * `name`
 * `short_intro`
 * `image`
 
-### 3. `about`
-
-Menyimpan deskripsi profile.
+#### 3. `about` untuk menyimpan deskripsi profile.
 
 * `id`
 * `description`
 
-### 4. `skills`
-
-Menyimpan daftar skill.
+#### 4. `skills` untuk menyimpan daftar skill.
 
 * `id`
 * `name`
 * `level`
 
-### 5. `projects`
-
-Menyimpan project portfolio.
+#### 5. `projects` untuk menyimpan project portfolio.
 
 * `id`
 * `title`
@@ -681,9 +667,7 @@ Menyimpan project portfolio.
 * `image`
 * `link`
 
-### 6. `experiences`
-
-Menyimpan pengalaman dan pendidikan.
+#### 6. `experiences` untuk menyimpan pengalaman dan pendidikan.
 
 * `id`
 * `title`
@@ -691,18 +675,14 @@ Menyimpan pengalaman dan pendidikan.
 * `year`
 * `description`
 
-### 7. `achievements`
-
-Menyimpan pencapaian.
+#### 7. `achievements` untuk menyimpan pencapaian.
 
 * `id`
 * `title`
 * `description`
 * `year`
 
-### 8. `certificates`
-
-Menyimpan data sertifikat.
+#### 8. `certificates` untuk menyimpan data sertifikat.
 
 * `id`
 * `title`
@@ -710,18 +690,14 @@ Menyimpan data sertifikat.
 * `year`
 * `link`
 
-### 9. `contacts`
-
-Menyimpan data kontak.
+#### 9. `contacts` untuk menyimpan data kontak.
 
 * `id`
 * `platform`
 * `display_text`
 * `link`
 
----
-
-# 6) Alur Kerja Website
+## 6) Alur Kerja Website
 
 Alur kerja website ini adalah:
 
@@ -732,30 +708,6 @@ Alur kerja website ini adalah:
 5. CSS dan Bootstrap mengatur tampilan visual website
 6. Pengguna dapat berinteraksi dengan tombol dan menu navigasi
 
----
-
-# 7) Konsep Dinamis pada Website
-
-Website ini bersifat **dinamis** karena isi kontennya tidak ditulis langsung secara permanen di HTML, tetapi diambil dari database.
-
-Contohnya:
-
-* nama profile diambil dari tabel `profile`
-* skill diambil dari tabel `skills`
-* project diambil dari tabel `projects`
-* sertifikat diambil dari tabel `certificates`
-
-Dengan begitu, jika data di database berubah, tampilan website juga akan ikut berubah tanpa perlu menulis ulang isi HTML satu per satu.
-
-## 3) Teknologi yang Digunakan
-
-- **HTML5** → struktur halaman  
-- **CSS3** → styling, animasi, glassmorphism  
-- **Bootstrap 5.3.3** → layout & komponen UI  
-- **PHP** → backend (ambil data dari database)  
-- **MySQL** → database  
-- **Laragon** → local server  
-
-## 4) Struktur Folder
+## 7) Struktur Folder
 
 <img width="241" height="427" alt="image" src="https://github.com/user-attachments/assets/a00c24a3-d74a-498d-9276-562ac1fe5453" />
