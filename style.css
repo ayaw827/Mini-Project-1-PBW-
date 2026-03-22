@@ -1,0 +1,222 @@
+[v-cloak] { display: none; }
+
+/* =========================
+   THEME
+========================= */
+:root{
+  --bg: #0b1220;
+  --bg2: #0f1a33;
+
+  --primary: #6c0630;
+  --accent:  #ce0158;
+
+  --card: rgba(226,232,240,.06);
+  --border: rgba(148,163,184,.14);
+
+  --text: #e2e8f0;
+  --muted: rgba(226,232,240,.65);
+}
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(206,1,88,0.15), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(108,6,48,0.2), transparent 40%),
+    var(--bg);
+}
+
+/* biar klik anchor section gak ketutup navbar sticky */
+#home, #about, #projects, #experience, #achievements, #certificates, #contact{
+  scroll-margin-top: 90px;
+}
+
+/* =========================
+   SECTION
+========================= */
+.section{
+  padding: 90px 0;
+  animation: fadeUp 0.8s ease both;
+}
+
+.section-alt{
+  background: var(--bg2);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.nav-glass{
+  background: rgba(11,18,32,.85) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-link,
+.navbar-brand{
+  color: var(--text) !important;
+}
+
+.nav-link{
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-link:hover{
+  color: var(--accent) !important;
+}
+
+.nav-link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: 0.3s;
+}
+
+.nav-link:hover::after{
+  width: 100%;
+}
+
+/* =========================
+   CARD
+========================= */
+.card-soft,
+.cert-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.20);
+  transition: all 0.35s ease;
+}
+
+.card-soft:hover,
+.cert-card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(206,1,88,.35);
+  box-shadow: 0 25px 70px rgba(206,1,88,.15);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-section{
+  padding-top: 60px;
+  position: relative;
+}
+
+.hero-section::before{
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(206,1,88,0.25), transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.hero-section .container{
+  position: relative;
+  z-index: 1;
+}
+
+.profile-img{
+  width: min(320px, 90%);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 60px rgba(0,0,0,.35);
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+.progress{
+  background: rgba(226,232,240,.10);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  height: 12px;
+}
+
+.progress-bar{
+  background: var(--accent) !important;
+}
+
+/* =========================
+   LINKS
+========================= */
+a{
+  color: var(--accent);
+}
+
+a:hover{
+  color: var(--primary);
+}
+
+/* =========================
+   BOOTSTRAP OVERRIDE
+========================= */
+.text-info{
+  color: var(--accent) !important;
+}
+
+.border-info-subtle{
+  border-color: rgba(206,1,88,.35) !important;
+}
+
+.btn-info{
+  --bs-btn-bg: var(--accent) !important;
+  --bs-btn-border-color: var(--accent) !important;
+  --bs-btn-hover-bg: var(--primary) !important;
+  --bs-btn-hover-border-color: var(--primary) !important;
+  --bs-btn-color: #fff !important;
+  border-radius: 12px !important;
+  padding: 10px 20px !important;
+  font-weight: 600;
+  transition: all 0.3s ease !important;
+}
+
+.btn-info:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(206,1,88,.35);
+}
+
+.btn-outline-info{
+  --bs-btn-color: var(--accent) !important;
+  --bs-btn-border-color: var(--accent) !important;
+  --bs-btn-hover-bg: var(--accent) !important;
+  --bs-btn-hover-border-color: var(--accent) !important;
+  --bs-btn-hover-color: #fff !important;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp{
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 576px){
+  .section{
+    padding: 70px 0;
+  }
+}
